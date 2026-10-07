@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>atelier mone | カラー専門ヘアサロン（デザインサンプル）</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;700&family=Zen+Kaku+Gothic+New:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --mist:#EEF0F3; --plum:#3B2A3F; --lilac:#B9A3D0; --mauve:#8E6C88; --white:#FFFFFF; --line:#D6D2DC;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--mist);color:var(--plum);font-family:"Zen Kaku Gothic New",sans-serif;font-size:16px;line-height:1.9;letter-spacing:.04em}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--mauve);outline-offset:3px}
+.sample{background:var(--plum);color:var(--mist);font-size:12px;text-align:center;padding:6px 16px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+header{display:flex;justify-content:space-between;align-items:center;padding:20px 0}
+.logo{font-family:"Zen Old Mincho",serif;font-size:22px;letter-spacing:.12em}
+.btn{display:inline-block;background:var(--plum);color:var(--white);text-decoration:none;padding:14px 28px;border-radius:999px;font-weight:500;letter-spacing:.08em;transition:background .2s}
+.btn:hover{background:var(--mauve)}
+.btn.ghost{background:transparent;color:var(--plum);border:1px solid var(--plum)}
+
+/* hero */
+.hero{display:grid;grid-template-columns:auto 1fr;gap:56px;align-items:end;padding:48px 0 96px}
+.tate{writing-mode:vertical-rl;font-family:"Zen Old Mincho",serif;font-weight:700;font-size:clamp(34px,5vw,56px);line-height:1.5;letter-spacing:.18em;height:min(70vh,520px)}
+.hero-side p{max-width:30em;margin-bottom:28px}
+.chips{display:flex;gap:0;margin-bottom:36px;height:180px}
+.chips span{flex:1;border-radius:0 0 40px 40px;transform-origin:top;animation:drop .9s cubic-bezier(.2,.8,.2,1) both}
+.chips span:nth-child(1){background:#C9B6DB;animation-delay:.05s}
+.chips span:nth-child(2){background:#A88FBE;animation-delay:.15s;height:88%}
+.chips span:nth-child(3){background:#8E6C88;animation-delay:.25s;height:76%}
+.chips span:nth-child(4){background:#B8A39A;animation-delay:.35s;height:92%}
+.chips span:nth-child(5){background:#6E5A63;animation-delay:.45s;height:70%}
+.chips span:nth-child(6){background:#D7C4B8;animation-delay:.55s;height:84%}
+@keyframes drop{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+@media (prefers-reduced-motion:reduce){.chips span{animation:none}}
+
+section{padding:88px 0}
+h2{font-family:"Zen Old Mincho",serif;font-size:clamp(24px,3vw,32px);font-weight:700;letter-spacing:.12em;margin-bottom:40px}
+.lead{max-width:34em}
+
+.worry{background:var(--white)}
+.worry ul{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px 40px;margin-top:8px}
+.worry li{padding:14px 0;border-bottom:1px solid var(--line)}
+
+.palette{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:32px}
+.color{display:flex;flex-direction:column;gap:12px}
+.swatch{aspect-ratio:3/4;border-radius:120px 120px 8px 8px}
+.color h3{font-family:"Zen Old Mincho",serif;font-size:19px}
+.color small{color:var(--mauve)}
+
+.reason{display:grid;grid-template-columns:1fr 1fr;gap:56px 72px}
+.reason div h3{font-family:"Zen Old Mincho",serif;font-size:20px;margin-bottom:10px;padding-left:16px;border-left:3px solid var(--lilac)}
+
+.price{background:var(--plum);color:var(--mist)}
+.price table{width:100%;border-collapse:collapse;max-width:720px}
+.price td{padding:18px 0;border-bottom:1px solid rgba(238,240,243,.2)}
+.price td:last-child{text-align:right;font-family:"Zen Old Mincho",serif;font-size:20px;white-space:nowrap}
+.price .note{font-size:13px;opacity:.75;margin-top:20px}
+.price td small{display:block;opacity:.7;font-size:13px}
+
+.voice{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:32px}
+blockquote{background:var(--white);padding:28px;border-radius:4px 40px 4px 4px}
+blockquote cite{display:block;margin-top:14px;font-style:normal;font-size:13px;color:var(--mauve)}
+
+.cta{text-align:center;padding:104px 0}
+.cta h2{margin-bottom:16px}
+.cta p{margin-bottom:32px}
+.cta .btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+footer{font-size:13px;padding:32px 0;border-top:1px solid var(--line);color:var(--mauve)}
+
+@media (max-width:720px){
+  .hero{grid-template-columns:1fr;gap:32px;padding-top:24px}
+  .tate{height:auto;max-height:340px;justify-self:end}
+  .chips{height:120px}
+  .reason{grid-template-columns:1fr;gap:36px}
+  section{padding:64px 0}
+}
+</style>
+</head>
+<body>
+<div class="sample">このページはLP制作のデザインサンプルです。店舗名・価格・お客様の声はすべて架空です。</div>
+<div class="wrap">
+  <header>
+    <div class="logo">atelier mone</div>
+    <a class="btn ghost" href="#reserve">予約する</a>
+  </header>
+
+  <div class="hero">
+    <h1 class="tate">くすみ色は<br>　似合う色で選ぶ。</h1>
+    <div class="hero-side">
+      <div class="chips" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+      <p>atelier mone は、ヘアカラーだけを扱う小さなサロンです。肌の色と瞳の色を見て、あなたに馴染むくすみカラーを一緒に決めます。</p>
+      <a class="btn" href="#reserve">初回カウンセリングを予約する</a>
+    </div>
+  </div>
+</div>
+
+<section class="worry">
+  <div class="wrap">
+    <h2>こんなことはありませんか</h2>
+    <ul>
+      <li>写真のとおりに頼んだのに、顔色が悪く見えた</li>
+      <li>明るくしたいけれど、職場で浮くのが心配</li>
+      <li>2週間で色が抜けて、黄色っぽくなる</li>
+      <li>白髪染めにすると、暗く重たい印象になる</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>人気のカラー</h2>
+    <div class="palette">
+      <div class="color"><div class="swatch" style="background:linear-gradient(#C9B6DB,#A88FBE)"></div><h3>ラベンダーグレージュ</h3><small>黄みを抑えて透明感を出したい方に</small></div>
+      <div class="color"><div class="swatch" style="background:linear-gradient(#B8A39A,#8D7A72)"></div><h3>ミルクティーベージュ</h3><small>オフィスでも浮かない明るさ</small></div>
+      <div class="color"><div class="swatch" style="background:linear-gradient(#8E6C88,#5A4257)"></div><h3>モーブブラウン</h3><small>暗めでも重く見せたくない方に</small></div>
+      <div class="color"><div class="swatch" style="background:linear-gradient(#9BA3AE,#6B7380)"></div><h3>グレーアッシュ</h3><small>白髪をぼかしながら明るく</small></div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--white)">
+  <div class="wrap">
+    <h2>カラー専門だからできること</h2>
+    <div class="reason">
+      <div><h3>15分のパーソナル診断</h3><p>肌・瞳・髪の地毛色をカラーチャートで確かめてから、色を提案します。</p></div>
+      <div><h3>色持ちを考えた薬剤選び</h3><p>髪の状態に合わせて薬剤を調合し、色が抜けたあとの色まで計算します。</p></div>
+      <div><h3>1日6名までの完全予約制</h3><p>施術中は担当が最後まで付き添います。待ち時間はありません。</p></div>
+      <div><h3>おうちケアの説明つき</h3><p>色を長持ちさせるシャンプーの方法を、お帰りの前にお伝えします。</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="price">
+  <div class="wrap">
+    <h2>料金</h2>
+    <table>
+      <tr><td>初回カウンセリング＋カラー<small>パーソナル診断・トリートメントつき</small></td><td>¥7,700</td></tr>
+      <tr><td>ダブルカラー<small>ブリーチ1回を含みます</small></td><td>¥14,300</td></tr>
+      <tr><td>リタッチカラー<small>根元3cmまで</small></td><td>¥5,500</td></tr>
+      <tr><td>白髪ぼかしハイライト</td><td>¥11,000</td></tr>
+    </table>
+    <p class="note">表示はすべて税込です。ロングヘアは別途¥1,100かかります。</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>お客様の声</h2>
+    <div class="voice">
+      <blockquote>写真で見せた色よりも少しグレーを足してもらったら、顔色が明るく見えるようになりました。<cite>30代・会社員</cite></blockquote>
+      <blockquote>白髪染めをやめてハイライトにしたら、伸びてきても境目が気になりません。<cite>40代・パート</cite></blockquote>
+      <blockquote>前のサロンでは2週間で黄色くなっていた色が、1か月たってもきれいでした。<cite>20代・学生</cite></blockquote>
+    </div>
+  </div>
+</section>
+
+<section class="cta" id="reserve" style="background:var(--white)">
+  <div class="wrap">
+    <h2>まずは似合う色を確かめに</h2>
+    <p>初回はカウンセリングのみのご来店も歓迎です。</p>
+    <div class="btns">
+      <a class="btn" href="#reserve">Webで予約する</a>
+      <a class="btn ghost" href="#reserve">LINEで相談する</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">atelier mone（架空の店舗） 営業時間 10:00〜19:00 ／ 火曜定休</div>
+</footer>
+</body>
+</html>
