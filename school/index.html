@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>コードっこ教室 | 小学生のプログラミング教室（デザインサンプル）</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Kosugi+Maru&display=swap" rel="stylesheet">
+<style>
+:root{--blue:#2F6BFF;--sun:#FFD23F;--coral:#FF6B6B;--ink:#1A1A40;--sky:#EAF1FF;--white:#FFFFFF}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--white);color:var(--ink);font-family:"Kosugi Maru",sans-serif;font-size:16px;line-height:1.85}
+:focus-visible{outline:3px solid var(--coral);outline-offset:3px}
+.sample{background:var(--ink);color:var(--white);font-size:12px;text-align:center;padding:6px 16px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+.display{font-family:"Dela Gothic One",sans-serif;font-weight:400}
+header{display:flex;justify-content:space-between;align-items:center;padding:16px 0}
+.logo{font-family:"Dela Gothic One";font-size:22px;color:var(--blue)}
+.btn{display:inline-block;background:var(--coral);color:var(--white);text-decoration:none;border:3px solid var(--ink);border-radius:14px;padding:14px 28px;font-size:17px;box-shadow:4px 4px 0 var(--ink);font-family:"Kosugi Maru";cursor:pointer}
+.btn:active{transform:translate(3px,3px);box-shadow:1px 1px 0 var(--ink)}
+.btn.sun{background:var(--sun);color:var(--ink)}
+.btn.small{padding:8px 16px;font-size:15px}
+
+.hero{background:var(--blue);color:var(--white);padding:48px 0 64px;border-bottom:4px solid var(--ink)}
+.hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.hero h1{font-family:"Dela Gothic One";font-size:clamp(30px,4.6vw,50px);line-height:1.35;margin-bottom:16px}
+.hero p{margin-bottom:24px;font-size:17px}
+.badge{display:inline-block;background:var(--sun);color:var(--ink);border:3px solid var(--ink);border-radius:999px;padding:2px 14px;margin-bottom:16px;font-size:14px}
+
+/* mini game */
+.game{background:var(--white);color:var(--ink);border:4px solid var(--ink);border-radius:20px;padding:18px;box-shadow:8px 8px 0 var(--ink)}
+.game h2{font-size:18px;margin-bottom:8px;text-align:left;font-family:"Kosugi Maru"}
+.board{display:grid;grid-template-columns:repeat(5,1fr);gap:4px;background:var(--ink);border:4px solid var(--ink);border-radius:10px;overflow:hidden;margin-bottom:12px}
+.cell{aspect-ratio:1;background:var(--sky);display:grid;place-items:center;font-size:clamp(20px,4vw,30px)}
+.cell.wall{background:#9DB4E8}
+.cell.goal{background:var(--sun)}
+.robot{transition:transform .2s}
+.prog{display:flex;flex-wrap:wrap;gap:6px;min-height:44px;background:var(--sky);border-radius:10px;padding:6px;margin-bottom:10px}
+.prog span{background:var(--blue);color:var(--white);border-radius:8px;width:32px;height:32px;display:grid;place-items:center;font-size:18px}
+.prog span.now{background:var(--coral)}
+.prog em{font-style:normal;font-size:13px;color:#5a6390;align-self:center;padding-left:6px}
+.keys{display:flex;gap:6px;flex-wrap:wrap}
+.keys button{border:3px solid var(--ink);background:var(--white);border-radius:10px;width:46px;height:46px;font-size:20px;cursor:pointer;font-family:inherit}
+.keys .run{width:auto;padding:0 14px;background:var(--coral);color:var(--white);font-size:16px}
+.keys .clear{width:auto;padding:0 12px;font-size:14px}
+.msg{margin-top:10px;min-height:28px;font-size:15px}
+
+section{padding:80px 0}
+h2.big{font-family:"Dela Gothic One";font-weight:400;font-size:clamp(24px,3.4vw,34px);text-align:center;margin-bottom:40px;line-height:1.4}
+.points{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.points div{border:3px solid var(--ink);border-radius:18px;padding:24px;background:var(--white)}
+.points div:nth-child(1){background:var(--sky)}
+.points div:nth-child(2){background:#FFF6D1}
+.points div:nth-child(3){background:#FFE4E4}
+.points h3{font-size:20px;margin-bottom:8px}
+.icon{font-family:"Dela Gothic One";font-size:40px;line-height:1;display:block;margin-bottom:10px;color:var(--blue)}
+
+.course{background:var(--sky);border-top:4px solid var(--ink);border-bottom:4px solid var(--ink)}
+.courses{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.c{background:var(--white);border:3px solid var(--ink);border-radius:18px;overflow:hidden}
+.c header{display:block;padding:14px 20px;color:var(--white);background:var(--blue)}
+.c:nth-child(2) header{background:var(--coral)}
+.c:nth-child(3) header{background:var(--ink)}
+.c header b{font-size:19px;display:block}
+.c header small{opacity:.9}
+.c div{padding:18px 20px}
+.c .yen{font-family:"Dela Gothic One";font-size:24px;margin-top:8px}
+.c .yen small{font-family:"Kosugi Maru";font-size:13px}
+
+.voice{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.bubble{position:relative;background:var(--white);border:3px solid var(--ink);border-radius:18px;padding:20px 22px}
+.bubble small{display:block;margin-top:8px;color:#5a6390}
+
+.cta{background:var(--sun);text-align:center;border-top:4px solid var(--ink)}
+.cta p{margin-bottom:24px;font-size:17px}
+.steps{list-style:none;display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-bottom:32px;counter-reset:s}
+.steps li{counter-increment:s;background:var(--white);border:3px solid var(--ink);border-radius:999px;padding:6px 18px}
+.steps li::before{content:counter(s) ". ";font-family:"Dela Gothic One"}
+footer{text-align:center;font-size:12px;padding:20px;background:var(--ink);color:var(--white)}
+
+@media (max-width:800px){
+  .hero .wrap,.points,.courses,.voice{grid-template-columns:1fr}
+  section{padding:56px 0}
+}
+@media (prefers-reduced-motion:reduce){.robot{transition:none}}
+</style>
+</head>
+<body>
+<div class="sample">このページはLP制作のデザインサンプルです。教室名・料金・保護者の声はすべて架空です。</div>
+<div class="wrap">
+  <header>
+    <div class="logo">コードっこ教室</div>
+    <a class="btn small sun" href="#trial">無料体験</a>
+  </header>
+</div>
+
+<div class="hero">
+  <div class="wrap">
+    <div>
+      <span class="badge">小学1年生〜6年生</span>
+      <h1>ゲームで遊ぶ子が、<br>ゲームを作る子になる。</h1>
+      <p>パソコンに触ったことがなくても大丈夫。ブロックを並べるプログラミングから始めて、半年で自分のゲームを1本作ります。</p>
+      <a class="btn sun" href="#trial">無料体験に申し込む</a>
+    </div>
+    <div class="game" aria-label="プログラミング体験ミニゲーム">
+      <h2>ためしてみよう：ロボットを★まで動かそう</h2>
+      <div class="board" id="board"></div>
+      <div class="prog" id="prog"><em>矢印を押して命令を並べてね</em></div>
+      <div class="keys">
+        <button data-d="up" aria-label="上へ">↑</button>
+        <button data-d="down" aria-label="下へ">↓</button>
+        <button data-d="left" aria-label="左へ">←</button>
+        <button data-d="right" aria-label="右へ">→</button>
+        <button class="run" id="run">じっこう</button>
+        <button class="clear" id="clear">けす</button>
+      </div>
+      <p class="msg" id="msg" aria-live="polite"></p>
+    </div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <h2 class="big">コードっこ教室の3つのこだわり</h2>
+    <div class="points">
+      <div><span class="icon">4人</span><h3>1クラス4人まで</h3><p>先生がひとりひとりの画面を見られる人数です。つまずいたらすぐに声をかけます。</p></div>
+      <div><span class="icon">発表</span><h3>毎月の発表会</h3><p>作った作品をみんなの前で紹介します。人に伝える力も育ちます。</p></div>
+      <div><span class="icon">報告</span><h3>授業ごとに報告</h3><p>その日に作ったものと、できるようになったことをLINEでお知らせします。</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="course">
+  <div class="wrap">
+    <h2 class="big">コースと月謝</h2>
+    <div class="courses">
+      <div class="c"><header><b>はじめてコース</b><small>小1〜小3</small></header><div><p>ブロックを並べて、キャラクターを動かすことから始めます。</p><p class="yen">¥8,800<small>／月（月4回）</small></p></div></div>
+      <div class="c"><header><b>ゲームづくりコース</b><small>小3〜小6</small></header><div><p>Scratchでオリジナルのゲームを作り、発表会で披露します。</p><p class="yen">¥11,000<small>／月（月4回）</small></p></div></div>
+      <div class="c"><header><b>ロボットコース</b><small>小4〜小6</small></header><div><p>センサーつきのロボットを組み立て、プログラムで動かします。</p><p class="yen">¥13,200<small>／月（月4回）</small></p></div></div>
+    </div>
+    <p style="text-align:center;margin-top:20px;font-size:14px">入会金¥11,000（無料体験の当日にお申し込みの方は無料）・教材費込み・税込</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2 class="big">保護者の声</h2>
+    <div class="voice">
+      <div class="bubble">ゲームばかりで心配でしたが、今は「どうやって作られているんだろう」と考えながら遊んでいます。<small>小4男子の保護者</small></div>
+      <div class="bubble">うまくいかないときに、自分で原因を探すようになりました。算数の文章題も前より粘るようになっています。<small>小2女子の保護者</small></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta" id="trial">
+  <div class="wrap">
+    <h2 class="big">まずは90分の無料体験へ</h2>
+    <p>手ぶらで来られます。パソコンは教室で用意します。</p>
+    <ol class="steps"><li>フォームから申し込み</li><li>日程の確認メール</li><li>体験授業</li></ol>
+    <a class="btn" href="#trial">無料体験に申し込む</a>
+  </div>
+</section>
+<footer>コードっこ教室（架空の教室）</footer>
+
+<script>
+// 5x5 board: S=start, G=goal, #=wall
+const map=["S..#.","#.#..","...#.",".#...","...#G"];
+const board=document.getElementById('board'),progEl=document.getElementById('prog'),msg=document.getElementById('msg');
+let cells=[],prog=[],busy=false;
+map.join('').split('').forEach(ch=>{
+  const c=document.createElement('div');c.className='cell'+(ch==='#'?' wall':ch==='G'?' goal':'');
+  if(ch==='G')c.textContent='★';board.appendChild(c);cells.push(c);
+});
+const robot=document.createElement('span');robot.className='robot';robot.setAttribute('role','img');robot.setAttribute('aria-label','ロボット');
+robot.innerHTML='<svg viewBox="0 0 40 40" width="1em" height="1em"><line x1="20" y1="3" x2="20" y2="9" stroke="#1A1A40" stroke-width="3"/><circle cx="20" cy="4" r="3" fill="#FF6B6B"/><rect x="6" y="9" width="28" height="24" rx="7" fill="#2F6BFF" stroke="#1A1A40" stroke-width="3"/><circle cx="15" cy="20" r="3.5" fill="#fff"/><circle cx="25" cy="20" r="3.5" fill="#fff"/><rect x="14" y="26" width="12" height="3" rx="1.5" fill="#FFD23F"/></svg>';
+const place=(r,c)=>cells[r*5+c].appendChild(robot);
+place(0,0);
+const arrows={up:'↑',down:'↓',left:'←',right:'→'},mv={up:[-1,0],down:[1,0],left:[0,-1],right:[0,1]};
+function draw(i){progEl.innerHTML=prog.length?prog.map((d,k)=>`<span class="${k===i?'now':''}">${arrows[d]}</span>`).join(''):'<em>矢印を押して命令を並べてね</em>';}
+document.querySelectorAll('.keys [data-d]').forEach(b=>b.onclick=()=>{if(busy||prog.length>=16)return;prog.push(b.dataset.d);draw();msg.textContent='';});
+document.getElementById('clear').onclick=()=>{if(busy)return;prog=[];draw();place(0,0);msg.textContent='';};
+document.getElementById('run').onclick=async()=>{
+  if(busy||!prog.length)return;busy=true;let r=0,c=0;place(0,0);
+  for(let i=0;i<prog.length;i++){
+    draw(i);await new Promise(t=>setTimeout(t,380));
+    const[dr,dc]=mv[prog[i]],nr=r+dr,nc=c+dc;
+    if(nr<0||nr>4||nc<0||nc>4||map[nr][nc]==='#'){msg.textContent='かべにぶつかったよ。命令を直してもう一度！';busy=false;return;}
+    r=nr;c=nc;place(r,c);
+  }
+  draw();
+  msg.textContent=map[r][c]==='G'?`ゴール！ ${prog.length}個の命令でとうちゃく。これがプログラミングです。`:'ゴールまであと少し。命令を足してみよう。';
+  busy=false;
+};
+</script>
+</body>
+</html>
