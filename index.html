@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LPデザインサンプル集</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F4F5F7;--ink:#1E2430;--sub:#5F6878;--line:#DADDE3;--white:#FFFFFF}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:"Noto Sans JP",sans-serif;line-height:1.8}
+:focus-visible{outline:3px solid #2F6BFF;outline-offset:3px}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+header{padding:64px 0 40px}
+h1{font-size:clamp(26px,4vw,36px);font-weight:700;margin-bottom:12px}
+header p{color:var(--sub);max-width:36em}
+.list{list-style:none;display:grid;gap:20px;padding-bottom:64px}
+.item a{display:grid;grid-template-columns:200px 1fr;background:var(--white);border:1px solid var(--line);border-radius:10px;overflow:hidden;text-decoration:none;color:inherit;transition:border-color .2s}
+.item a:hover{border-color:var(--ink)}
+.pal{display:flex}
+.pal i{flex:1}
+.body{padding:20px 24px}
+.body h2{font-size:19px;font-weight:700}
+.body .biz{font-size:13px;color:var(--sub);margin-bottom:8px}
+.body p{font-size:15px}
+.body .feat{font-size:13px;color:var(--sub);margin-top:8px}
+footer{border-top:1px solid var(--line);padding:24px 0 40px;font-size:13px;color:var(--sub)}
+@media (max-width:640px){.item a{grid-template-columns:1fr}.pal{height:56px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>LPデザインサンプル集</h1>
+    <p>業種ごとに、雰囲気と構成を変えて制作したランディングページのサンプルです。どれもスマートフォンで表示を確認できます。</p>
+  </header>
+  <ul class="list">
+    <li class="item"><a href="beauty/">
+      <div class="pal" aria-hidden="true"><i style="background:#EEF0F3"></i><i style="background:#B9A3D0"></i><i style="background:#8E6C88"></i><i style="background:#3B2A3F"></i></div>
+      <div class="body"><div class="biz">美容・ヘアサロン</div><h2>atelier mone</h2><p>カラー専門サロン。縦書きの見出しと、髪色のカラーチップで上品な印象にしました。</p><p class="feat">工夫した点：カラーチップが降りてくる演出、人気カラーの見本</p></div>
+    </a></li>
+    <li class="item"><a href="seitai/">
+      <div class="pal" aria-hidden="true"><i style="background:#DCE6DA"></i><i style="background:#5E8C6A"></i><i style="background:#1F4D3A"></i><i style="background:#F2C14E"></i></div>
+      <div class="body"><div class="biz">整体院・治療院</div><h2>みどり整体院</h2><p>肩こり・腰痛の整体院。初回料金と予約ボタンを目立たせ、来院につながる構成にしました。</p><p class="feat">工夫した点：体の図のつらい場所を押すと、原因と施術内容が出る</p></div>
+    </a></li>
+    <li class="item"><a href="shigyo/">
+      <div class="pal" aria-hidden="true"><i style="background:#F5F7FA"></i><i style="background:#55627A"></i><i style="background:#1C2B4A"></i><i style="background:#A8874A"></i></div>
+      <div class="body"><div class="biz">士業（行政書士・相続）</div><h2>みなと相続相談室</h2><p>相続専門の行政書士事務所。紺と真鍮色で、信頼感と落ち着きを出しました。</p><p class="feat">工夫した点：相続手続きの期限を、タイムラインで一目で分かるように整理</p></div>
+    </a></li>
+    <li class="item"><a href="school/">
+      <div class="pal" aria-hidden="true"><i style="background:#2F6BFF"></i><i style="background:#FFD23F"></i><i style="background:#FF6B6B"></i><i style="background:#1A1A40"></i></div>
+      <div class="body"><div class="biz">スクール・教室</div><h2>コードっこ教室</h2><p>小学生向けのプログラミング教室。保護者と子どもの両方に伝わる、明るいデザインです。</p><p class="feat">工夫した点：ロボットを★まで動かす、プログラミング体験ミニゲーム</p></div>
+    </a></li>
+    <li class="item"><a href="izakaya/">
+      <div class="pal" aria-hidden="true"><i style="background:#24324A"></i><i style="background:#EDE6D6"></i><i style="background:#C9A877"></i><i style="background:#B83A2E"></i></div>
+      <div class="body"><div class="biz">飲食店</div><h2>炭火焼鳥 とりかね</h2><p>焼鳥店。藍色ののれんと木札のお品書きで、お店の空気感を伝えます。</p><p class="feat">工夫した点：縦書きの木札メニュー、宴会コースの比較</p></div>
+    </a></li>
+  </ul>
+  <footer>掲載している店舗・事務所・教室・価格・お客様の声は、すべてデザインサンプル用の架空のものです。</footer>
+</div>
+</body>
+</html>
