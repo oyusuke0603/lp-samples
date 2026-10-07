@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>みなと相続相談室 | 行政書士事務所（デザインサンプル）</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700&family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#1C2B4A;--slate:#55627A;--brass:#A8874A;--paper:#F5F7FA;--white:#FFFFFF;--rule:#D9DEE7}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--navy);font-family:"Noto Sans JP",sans-serif;font-size:16px;line-height:1.9}
+:focus-visible{outline:2px solid var(--brass);outline-offset:3px}
+.sample{background:var(--brass);color:var(--white);font-size:12px;text-align:center;padding:6px 16px}
+.wrap{max-width:960px;margin:0 auto;padding:0 24px}
+.serif{font-family:"Shippori Mincho",serif}
+header{background:var(--white);border-bottom:1px solid var(--rule)}
+header .wrap{display:flex;justify-content:space-between;align-items:center;padding:18px 24px;gap:16px}
+.logo{font-family:"Shippori Mincho",serif;font-weight:700;font-size:20px}
+.logo small{display:block;font-family:"Noto Sans JP",sans-serif;font-size:11px;color:var(--slate);font-weight:400}
+.btn{display:inline-block;background:var(--navy);color:var(--white);text-decoration:none;padding:15px 30px;border-radius:2px;font-weight:500}
+.btn:hover{background:#2C3F66}
+.btn.brass{background:var(--brass)}
+
+.hero{padding:80px 0 72px}
+.hero h1{font-family:"Shippori Mincho",serif;font-size:clamp(28px,4.2vw,44px);line-height:1.6;margin-bottom:24px;max-width:18em}
+.hero p{max-width:34em;color:var(--slate);margin-bottom:32px}
+.facts{display:flex;gap:40px;flex-wrap:wrap;margin-top:48px;padding-top:24px;border-top:1px solid var(--rule);font-size:14px;color:var(--slate)}
+.facts b{display:block;font-family:"Shippori Mincho",serif;font-size:26px;color:var(--navy)}
+
+section{padding:80px 0}
+h2{font-family:"Shippori Mincho",serif;font-size:clamp(22px,3vw,30px);margin-bottom:12px}
+.sub{color:var(--slate);margin-bottom:48px;max-width:36em}
+
+/* timeline */
+.timeline{background:var(--white)}
+.tl{position:relative;list-style:none;padding-left:132px}
+.tl::before{content:"";position:absolute;left:104px;top:8px;bottom:8px;width:2px;background:var(--rule)}
+.tl li{position:relative;padding-bottom:40px}
+.tl li:last-child{padding-bottom:0}
+.tl .when{position:absolute;left:-132px;width:92px;text-align:right;font-family:"Shippori Mincho",serif;font-weight:700;font-size:15px;line-height:1.5;padding-top:2px}
+.tl li::before{content:"";position:absolute;left:-34px;top:9px;width:14px;height:14px;border-radius:50%;background:var(--white);border:3px solid var(--navy)}
+.tl li.deadline::before{background:var(--brass);border-color:var(--brass)}
+.tl li.deadline .when{color:var(--brass)}
+.tl h3{font-size:18px;font-weight:500;margin-bottom:4px}
+.tl p{color:var(--slate);font-size:15px}
+.tl .tag{display:inline-block;font-size:12px;background:#F3EBDD;color:#7A5F2E;padding:1px 10px;margin-left:8px;vertical-align:2px}
+
+.services{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--rule);border-left:1px solid var(--rule)}
+.services div{padding:28px;border-right:1px solid var(--rule);border-bottom:1px solid var(--rule);background:var(--white)}
+.services h3{font-family:"Shippori Mincho",serif;font-size:19px;margin-bottom:6px}
+.services p{font-size:15px;color:var(--slate)}
+.services .fee{display:block;margin-top:12px;color:var(--navy);font-weight:500}
+
+.profile{display:grid;grid-template-columns:200px 1fr;gap:48px;align-items:start}
+.portrait{aspect-ratio:3/4;background:linear-gradient(160deg,#D9DEE7,#B7C0D0);display:grid;place-items:center;color:var(--slate);font-size:13px}
+.profile h3{font-family:"Shippori Mincho",serif;font-size:22px;margin-bottom:4px}
+.profile .role{color:var(--slate);font-size:14px;margin-bottom:16px}
+
+.faq details{background:var(--white);border:1px solid var(--rule);padding:18px 22px;margin-bottom:8px}
+.faq summary{cursor:pointer;font-weight:500}
+.faq details p{margin-top:10px;color:var(--slate)}
+
+.cta{background:var(--navy);color:var(--white)}
+.cta .wrap{display:grid;grid-template-columns:1.2fr 1fr;gap:48px;align-items:center}
+.cta p{opacity:.8}
+.cta .box{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.2);padding:28px;text-align:center}
+.cta .box b{display:block;font-family:"Shippori Mincho",serif;font-size:24px;margin-bottom:6px}
+.cta .box small{display:block;margin-top:14px;opacity:.7}
+footer{font-size:12px;color:var(--slate);text-align:center;padding:24px}
+
+@media (max-width:720px){
+  .services,.profile,.cta .wrap{grid-template-columns:1fr}
+  .portrait{max-width:180px}
+  .tl{padding-left:28px}
+  .tl::before{left:6px}
+  .tl li::before{left:-28px}
+  .tl .when{position:static;display:block;text-align:left;width:auto}
+  section{padding:56px 0}
+  header .btn{padding:10px 16px;font-size:14px}
+}
+</style>
+</head>
+<body>
+<div class="sample">このページはLP制作のデザインサンプルです。事務所名・人物・料金はすべて架空です。</div>
+<header>
+  <div class="wrap">
+    <div class="logo">みなと相続相談室<small>行政書士 港川事務所</small></div>
+    <a class="btn" href="#contact">無料相談を予約</a>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <h1>相続の手続きは、期限のあるものから順番に。</h1>
+    <p>ご家族が亡くなったあと、届け出や手続きは100種類以上あると言われます。何から手をつければいいか分からない方に、期限と順番を整理してお伝えします。</p>
+    <a class="btn brass" href="#contact">初回60分の無料相談を予約する</a>
+    <div class="facts">
+      <div><b>1,200件</b>相続手続きの相談実績</div>
+      <div><b>土日・夜間</b>ご相談に対応</div>
+      <div><b>定額制</b>追加費用は事前にお知らせ</div>
+    </div>
+  </div>
+</div>
+
+<section class="timeline">
+  <div class="wrap">
+    <h2>亡くなってからの手続きと期限</h2>
+    <p class="sub">金色の印は、過ぎると不利益が出る期限です。当事務所では、ご相談の日から逆算して手続きの予定表をお作りします。</p>
+    <ol class="tl">
+      <li><span class="when">7日以内</span><h3>死亡届の提出</h3><p>市区町村役場へ提出します。葬儀社が代行することも多い手続きです。</p></li>
+      <li><span class="when">14日以内</span><h3>年金・健康保険の届け出</h3><p>年金の受給停止と、国民健康保険・介護保険の資格喪失届を出します。</p></li>
+      <li><span class="when">2か月目まで</span><h3>遺言書の確認と相続人の調査</h3><p>戸籍を集めて、誰が相続人になるかを確定します。<span class="tag">当事務所が代行</span></p></li>
+      <li class="deadline"><span class="when">3か月以内</span><h3>相続放棄・限定承認の判断</h3><p>借金が多い場合は、この期限までに家庭裁判所へ申し立てが必要です。</p></li>
+      <li class="deadline"><span class="when">4か月以内</span><h3>準確定申告</h3><p>亡くなった方のその年の所得を申告します。</p></li>
+      <li><span class="when">5〜9か月</span><h3>遺産分割協議と名義変更</h3><p>協議書を作成し、預貯金や不動産の名義を変えます。<span class="tag">当事務所が代行</span></p></li>
+      <li class="deadline"><span class="when">10か月以内</span><h3>相続税の申告・納付</h3><p>遺産が基礎控除額を超える場合に必要です。提携の税理士をご紹介します。</p></li>
+    </ol>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>お手伝いできること</h2>
+    <p class="sub">必要な手続きだけを選んでご依頼いただけます。</p>
+    <div class="services">
+      <div><h3>相続人の調査</h3><p>戸籍を集め、相続関係説明図を作成します。</p><span class="fee">55,000円〜</span></div>
+      <div><h3>遺産分割協議書の作成</h3><p>話し合いの内容を、銀行や法務局で使える書面にします。</p><span class="fee">66,000円〜</span></div>
+      <div><h3>預貯金の名義変更・解約</h3><p>金融機関ごとの書類を集め、窓口の手続きを代行します。</p><span class="fee">1行 33,000円〜</span></div>
+      <div><h3>遺言書の作成サポート</h3><p>ご自身の相続に備えて、公正証書遺言の作成をお手伝いします。</p><span class="fee">88,000円〜</span></div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--white)">
+  <div class="wrap profile">
+    <div class="portrait">写真が入ります</div>
+    <div>
+      <h3>港川 誠</h3>
+      <p class="role">代表行政書士</p>
+      <p>自分の父の相続で、平日に何度も役所と銀行を回った経験から、相続専門の事務所を開きました。専門用語を使わず、ご家族が今日やることを一つずつお伝えします。</p>
+    </div>
+  </div>
+</section>
+
+<section class="faq">
+  <div class="wrap">
+    <h2 style="margin-bottom:32px">よくある質問</h2>
+    <details><summary>相談だけでも大丈夫ですか？</summary><p>はい。初回60分は無料です。ご依頼いただくかどうかは、お見積もりを見てからお決めください。</p></details>
+    <details><summary>遠方に住んでいますが、依頼できますか？</summary><p>オンライン面談と郵送で、全国からのご依頼に対応しています。</p></details>
+    <details><summary>相続人どうしで揉めています。</summary><p>争いがある場合、行政書士は代理人になれません。提携の弁護士をご紹介します。</p></details>
+  </div>
+</section>
+
+<section class="cta" id="contact">
+  <div class="wrap">
+    <div>
+      <h2>まずは、今やることを整理しましょう</h2>
+      <p>ご相談では、手続きの予定表を無料でお渡しします。</p>
+    </div>
+    <div class="box">
+      <b>初回60分 無料</b>
+      平日 9:00〜20:00 ／ 土日 10:00〜17:00
+      <p style="margin-top:20px"><a class="btn brass" href="#contact">相談日を予約する</a></p>
+      <small>オンライン面談にも対応しています</small>
+    </div>
+  </div>
+</section>
+<footer>行政書士 港川事務所（架空の事務所）</footer>
+</body>
+</html>
