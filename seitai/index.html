@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>みどり整体院 | 肩こり・腰痛の整体（デザインサンプル）</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--sage:#DCE6DA;--forest:#1F4D3A;--leaf:#5E8C6A;--sun:#F2C14E;--white:#FFFFFF;--ink:#23332B}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--white);color:var(--ink);font-family:"M PLUS Rounded 1c",sans-serif;line-height:1.85;font-size:16px}
+:focus-visible{outline:3px solid var(--sun);outline-offset:3px}
+.sample{background:var(--forest);color:var(--white);font-size:12px;text-align:center;padding:6px 16px}
+.wrap{max-width:1000px;margin:0 auto;padding:0 20px}
+header{display:flex;justify-content:space-between;align-items:center;padding:16px 0;gap:12px}
+.logo{font-weight:800;font-size:20px;color:var(--forest)}
+.tel{font-weight:700;color:var(--forest);text-decoration:none;font-size:15px}
+.btn{display:inline-block;background:var(--sun);color:var(--ink);font-weight:800;text-decoration:none;padding:16px 32px;border-radius:12px;box-shadow:0 4px 0 #C99A2A;font-size:17px}
+.btn:active{transform:translateY(3px);box-shadow:0 1px 0 #C99A2A}
+
+.hero{background:var(--sage);padding:48px 0 64px}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.hero h1{font-size:clamp(28px,4.4vw,44px);font-weight:800;line-height:1.45;color:var(--forest);margin-bottom:16px}
+.hero p{margin-bottom:24px}
+.offer{display:inline-flex;align-items:baseline;gap:10px;background:var(--white);border-radius:12px;padding:10px 18px;margin-bottom:24px}
+.offer b{font-size:32px;color:var(--forest)}
+.offer s{color:#7a8a80}
+
+/* body map */
+.map{background:var(--white);border-radius:24px;padding:20px;text-align:center}
+.map p.hint{font-size:14px;color:var(--leaf);margin-bottom:6px;font-weight:700}
+.map svg{width:100%;max-width:240px;height:auto}
+.spot{cursor:pointer}
+.spot circle{fill:var(--sun);stroke:var(--white);stroke-width:3;transition:r .2s}
+.spot:hover circle,.spot:focus circle,.spot[aria-pressed="true"] circle{r:15;fill:#E39B1B}
+.spot:focus{outline:none}
+.answer{min-height:96px;background:var(--sage);border-radius:12px;padding:12px 16px;text-align:left;font-size:15px}
+.answer b{color:var(--forest)}
+
+section{padding:80px 0}
+h2{font-size:clamp(22px,3vw,30px);font-weight:800;color:var(--forest);text-align:center;margin-bottom:40px;line-height:1.5}
+.why{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.why div{border-top:6px solid var(--leaf);padding-top:16px}
+.why h3{font-size:19px;color:var(--forest);margin-bottom:8px}
+
+.flow{background:var(--sage)}
+.flow ol{list-style:none;counter-reset:s;display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.flow li{counter-increment:s;background:var(--white);border-radius:16px;padding:20px}
+.flow li::before{content:counter(s);display:grid;place-items:center;width:36px;height:36px;border-radius:50%;background:var(--forest);color:var(--white);font-weight:800;margin-bottom:10px}
+.flow h3{font-size:17px;color:var(--forest)}
+.flow p{font-size:14px}
+
+.voice{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.voice div{background:var(--white);border:2px solid var(--sage);border-radius:16px;padding:24px}
+.voice b{display:block;color:var(--forest);margin-bottom:6px}
+.voice small{display:block;margin-top:10px;color:var(--leaf)}
+
+.faq details{border-bottom:2px solid var(--sage);padding:16px 0}
+.faq summary{cursor:pointer;font-weight:700;color:var(--forest);list-style:none}
+.faq summary::before{content:"Q. ";color:var(--leaf)}
+.faq details p{margin-top:8px}
+
+.cta{background:var(--forest);color:var(--white);text-align:center}
+.cta h2{color:var(--white)}
+.cta p{margin-bottom:28px}
+.info{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:640px;margin:40px auto 0;text-align:left;font-size:14px}
+footer{text-align:center;font-size:12px;padding:20px;color:#5c6b63}
+
+@media (max-width:760px){
+  .hero .wrap,.why,.voice,.info{grid-template-columns:1fr}
+  .flow ol{grid-template-columns:1fr 1fr}
+  header .tel{display:none}
+  section{padding:56px 0}
+}
+</style>
+</head>
+<body>
+<div class="sample">このページはLP制作のデザインサンプルです。院名・料金・患者様の声はすべて架空です。</div>
+<div class="wrap">
+  <header>
+    <div class="logo">みどり整体院</div>
+    <a class="tel" href="#reserve">予約受付 9:00〜20:00</a>
+  </header>
+</div>
+
+<div class="hero">
+  <div class="wrap">
+    <div>
+      <h1>マッサージで戻る肩こりは、<br>姿勢から整えます。</h1>
+      <p>駅から徒歩3分。デスクワークで固まった肩と腰を、骨盤と背骨のバランスから見直す整体院です。</p>
+      <div class="offer">初回 <b>¥2,980</b> <s>通常¥6,600</s></div><br>
+      <a class="btn" href="#reserve">初回の予約をする</a>
+    </div>
+    <div class="map">
+      <p class="hint">つらい場所を押してください</p>
+      <svg viewBox="0 0 200 360" role="group" aria-label="体の図">
+        <g fill="#B9CDB8">
+          <circle cx="100" cy="40" r="28"/>
+          <rect x="88" y="64" width="24" height="18" rx="6"/>
+          <path d="M52 86 Q100 74 148 86 L158 200 Q100 214 42 200 Z"/>
+          <path d="M52 90 L26 190 L40 194 L64 112 Z"/>
+          <path d="M148 90 L174 190 L160 194 L136 112 Z"/>
+          <path d="M58 200 L70 340 L94 340 L98 214 Z"/>
+          <path d="M142 200 L130 340 L106 340 L102 214 Z"/>
+        </g>
+        <g class="spot" data-k="head" tabindex="0" role="button" aria-pressed="false" aria-label="頭"><circle cx="100" cy="36" r="11"/></g>
+        <g class="spot" data-k="neck" tabindex="0" role="button" aria-pressed="false" aria-label="首・肩"><circle cx="124" cy="90" r="11"/></g>
+        <g class="spot" data-k="back" tabindex="0" role="button" aria-pressed="false" aria-label="腰"><circle cx="100" cy="176" r="11"/></g>
+        <g class="spot" data-k="knee" tabindex="0" role="button" aria-pressed="false" aria-label="ひざ"><circle cx="84" cy="276" r="11"/></g>
+      </svg>
+      <div class="answer" id="answer" aria-live="polite"><b>肩・腰・ひざ・頭</b>の黄色い丸を押すと、よくある原因と当院での施術内容が表示されます。</div>
+    </div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <h2>みどり整体院が選ばれる理由</h2>
+    <div class="why">
+      <div><h3>原因を写真で説明</h3><p>施術前後の姿勢を撮影し、どこがどれだけ変わったかを一緒に確認します。</p></div>
+      <div><h3>ボキボキしない</h3><p>関節を鳴らす施術は行いません。やさしい力で筋肉をゆるめます。</p></div>
+      <div><h3>家でできる体操つき</h3><p>1日3分でできるストレッチを、紙とLINEでお渡しします。</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="flow">
+  <div class="wrap">
+    <h2>初回の流れ（約60分）</h2>
+    <ol>
+      <li><h3>問診</h3><p>痛む場所と生活習慣をうかがいます。</p></li>
+      <li><h3>姿勢チェック</h3><p>写真と動きのテストで原因を探します。</p></li>
+      <li><h3>施術</h3><p>骨盤と背骨のバランスを整えます。</p></li>
+      <li><h3>体操の説明</h3><p>家で続けるストレッチをお伝えします。</p></li>
+    </ol>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>患者様の声</h2>
+    <div class="voice">
+      <div><b>朝の腰の重さがなくなりました</b>3回目から、起きたときの腰の重さが気にならなくなりました。体操も簡単で続けられています。<small>40代・事務職</small></div>
+      <div><b>頭痛薬を飲む回数が減りました</b>肩こりからくる頭痛が月に何度もありましたが、通い始めて減っています。<small>30代・システムエンジニア</small></div>
+    </div>
+  </div>
+</section>
+
+<section class="faq" style="padding-top:0">
+  <div class="wrap">
+    <h2>よくある質問</h2>
+    <details><summary>どんな服装で行けばいいですか？</summary><p>着替えをご用意しています。仕事帰りのスーツのままでもお越しいただけます。</p></details>
+    <details><summary>何回くらい通えばいいですか？</summary><p>状態によって変わりますが、多くの方は最初の1か月に4回ほど通い、その後は月1回のメンテナンスに移ります。</p></details>
+    <details><summary>健康保険は使えますか？</summary><p>当院は自費施術のため、健康保険はお使いいただけません。</p></details>
+  </div>
+</section>
+
+<section class="cta" id="reserve">
+  <div class="wrap">
+    <h2>初回 ¥2,980 で体験できます</h2>
+    <p>1日3名さままでの限定です。LINEなら24時間予約できます。</p>
+    <a class="btn" href="#reserve">LINEで予約する</a>
+    <div class="info">
+      <div>受付時間：9:00〜20:00（土日は18:00まで）</div>
+      <div>定休日：水曜日</div>
+      <div>アクセス：〇〇駅 東口から徒歩3分</div>
+      <div>駐車場：2台あり</div>
+    </div>
+  </div>
+</section>
+<footer>みどり整体院（架空の院）</footer>
+
+<script>
+const txt={
+  head:"<b>頭</b>：首の付け根が固まると、頭を締め付けるような頭痛が出やすくなります。首まわりの筋肉をゆるめて血流を戻します。",
+  neck:"<b>首・肩</b>：前かがみの姿勢が続くと、頭の重さを肩で支えることになります。背中を伸ばしやすい骨盤の位置に整えます。",
+  back:"<b>腰</b>：座りっぱなしで骨盤が後ろに傾くと、腰の筋肉に負担が集まります。骨盤の傾きを整え、太ももの裏をゆるめます。",
+  knee:"<b>ひざ</b>：O脚や足首の固さが、ひざの内側の痛みにつながります。股関節と足首の動きを取り戻します。"
+};
+const spots=document.querySelectorAll('.spot'),ans=document.getElementById('answer');
+spots.forEach(s=>{
+  const go=()=>{spots.forEach(x=>x.setAttribute('aria-pressed','false'));s.setAttribute('aria-pressed','true');ans.innerHTML=txt[s.dataset.k];};
+  s.addEventListener('click',go);
+  s.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();go();}});
+});
+</script>
+</body>
+</html>
