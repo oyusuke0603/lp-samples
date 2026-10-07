@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>炭火焼鳥 とりかね | 宴会・ご予約（デザインサンプル）</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&family=Noto+Serif+JP:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--ai:#24324A;--ai-deep:#18233A;--kinari:#EDE6D6;--wood:#C9A877;--wood-dark:#8A6A3E;--shu:#B83A2E;--white:#FFFFFF}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--ai);color:var(--kinari);font-family:"Noto Serif JP",serif;font-size:16px;line-height:2}
+:focus-visible{outline:2px solid var(--wood);outline-offset:3px}
+.sample{background:var(--shu);color:var(--white);font-size:12px;text-align:center;padding:6px 16px;font-family:sans-serif}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+.brush{font-family:"Yuji Syuku",serif}
+header{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
+.logo{font-family:"Yuji Syuku";font-size:24px}
+.btn{display:inline-block;background:var(--shu);color:var(--white);text-decoration:none;padding:14px 32px;font-weight:600;letter-spacing:.1em;border-radius:2px}
+.btn:hover{background:#9E2F24}
+.btn.line{background:transparent;border:1px solid var(--kinari);color:var(--kinari)}
+
+/* hero: noren */
+.hero{position:relative;padding:24px 0 96px;overflow:hidden}
+.noren{display:flex;gap:6px;justify-content:center;margin-bottom:56px}
+.noren span{flex:0 1 120px;height:220px;background:var(--kinari);color:var(--ai);font-family:"Yuji Syuku";font-size:clamp(48px,9vw,96px);display:flex;align-items:center;justify-content:center;writing-mode:vertical-rl;transform-origin:top;animation:sway 1.4s ease-out both}
+.noren span:nth-child(2){animation-delay:.08s}.noren span:nth-child(3){animation-delay:.16s}.noren span:nth-child(4){animation-delay:.24s}
+@keyframes sway{0%{transform:rotate(3deg) scaleY(.92)}60%{transform:rotate(-1deg)}100%{transform:none}}
+@media (prefers-reduced-motion:reduce){.noren span{animation:none}}
+.hero-text{text-align:center}
+.hero-text h1{font-size:clamp(24px,3.4vw,34px);font-weight:600;letter-spacing:.14em;margin-bottom:16px}
+.hero-text p{max-width:32em;margin:0 auto 32px;opacity:.9}
+.hero-text .btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+
+section{padding:88px 0}
+h2{font-family:"Yuji Syuku";font-weight:400;font-size:clamp(26px,3.4vw,36px);letter-spacing:.1em;margin-bottom:12px}
+.sub{opacity:.8;margin-bottom:48px}
+
+/* menu: wooden tags */
+.menu{background:var(--ai-deep)}
+.fuda{display:flex;flex-direction:row-reverse;justify-content:center;flex-wrap:wrap;gap:14px 10px;padding-top:24px;border-top:6px solid var(--wood-dark)}
+.fuda div{position:relative;width:64px;height:240px;background:linear-gradient(90deg,#BE9C6A,var(--wood) 30%,#D3B585 70%,#BE9C6A);color:#2A1E10;writing-mode:vertical-rl;display:flex;justify-content:space-between;align-items:center;padding:16px 0 12px;border-radius:2px}
+.fuda div::before{content:"";position:absolute;top:-22px;left:50%;width:2px;height:22px;background:var(--wood-dark)}
+.fuda b{font-family:"Yuji Syuku";font-weight:400;font-size:24px;letter-spacing:.08em}
+.fuda small{font-size:14px;text-orientation:upright;font-weight:600;color:#5B3A14}
+.fuda .osusume{background:linear-gradient(90deg,#9E2F24,var(--shu) 40%,#C9483B 70%,#9E2F24);color:var(--kinari)}
+.fuda .osusume small{color:var(--kinari)}
+.menu .note{text-align:center;margin-top:28px;font-size:14px;opacity:.75}
+
+.kodawari{display:grid;grid-template-columns:repeat(3,1fr);gap:48px}
+.kodawari h3{font-size:19px;font-weight:600;margin-bottom:8px;padding-bottom:8px;border-bottom:1px solid rgba(237,230,214,.25)}
+.kodawari p{font-size:15px;opacity:.85}
+
+.course{background:var(--kinari);color:var(--ai)}
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.plan{background:var(--white);padding:28px;border-top:4px solid var(--ai)}
+.plan.best{border-top-color:var(--shu)}
+.plan h3{font-family:"Yuji Syuku";font-weight:400;font-size:24px}
+.plan .yen{font-size:26px;font-weight:600;margin:6px 0 12px}
+.plan .yen small{font-size:13px;font-weight:400}
+.plan ul{list-style:none;font-size:14px}
+.plan li{padding:4px 0;border-bottom:1px dotted #C8BFA9}
+.plan .tag{display:inline-block;background:var(--shu);color:var(--white);font-size:12px;padding:0 10px;margin-left:8px;vertical-align:4px;font-family:sans-serif}
+.course .free{margin-top:28px;text-align:center}
+
+.access{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.access dl{display:grid;grid-template-columns:7em 1fr;gap:10px 16px;font-size:15px}
+.access dt{opacity:.7}
+.mapbox{border:1px solid rgba(237,230,214,.3);min-height:240px;display:grid;place-items:center;font-size:14px;opacity:.7}
+
+.cta{background:var(--shu);text-align:center;color:var(--white)}
+.cta p{margin-bottom:28px}
+.cta .btn{background:var(--white);color:var(--shu)}
+footer{text-align:center;font-size:12px;padding:20px;opacity:.6}
+
+@media (max-width:760px){
+  .noren span{height:150px}
+  .kodawari,.plans,.access{grid-template-columns:1fr}
+  .fuda div{width:52px;height:200px}
+  .fuda b{font-size:20px}
+  section{padding:64px 0}
+}
+</style>
+</head>
+<body>
+<div class="sample">このページはLP制作のデザインサンプルです。店名・メニュー・価格はすべて架空です。</div>
+<div class="wrap">
+  <header>
+    <div class="logo">炭火焼鳥 とりかね</div>
+    <a class="btn" href="#yoyaku">予約する</a>
+  </header>
+</div>
+
+<div class="hero">
+  <div class="wrap">
+    <div class="noren" aria-hidden="true"><span>と</span><span>り</span><span>か</span><span>ね</span></div>
+    <div class="hero-text">
+      <h1>朝締めの地鶏を、備長炭で一本ずつ。</h1>
+      <p>カウンター12席と個室2部屋の焼鳥屋です。仕事帰りの一杯から、10名さままでの宴会まで承ります。</p>
+      <div class="btns">
+        <a class="btn" href="#yoyaku">席を予約する</a>
+        <a class="btn line" href="#course">宴会コースを見る</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="menu">
+  <div class="wrap">
+    <h2>お品書き</h2>
+    <p class="sub">一本からご注文いただけます。赤い札は大将のおすすめです。</p>
+    <div class="fuda">
+      <div class="osusume"><b>ねぎま</b><small>二〇〇円</small></div>
+      <div><b>もも塩</b><small>一八〇円</small></div>
+      <div class="osusume"><b>つくね月見</b><small>二八〇円</small></div>
+      <div><b>かわ</b><small>一五〇円</small></div>
+      <div><b>せせり</b><small>二二〇円</small></div>
+      <div><b>はつ</b><small>一六〇円</small></div>
+      <div><b>手羽先</b><small>二四〇円</small></div>
+      <div class="osusume"><b>ちょうちん</b><small>三二〇円</small></div>
+    </div>
+    <p class="note">価格は一本・税込です。タレか塩をお選びください。</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>とりかねのこだわり</h2>
+    <p class="sub">毎朝、仕込みに3時間かけています。</p>
+    <div class="kodawari">
+      <div><h3>朝締めの地鶏</h3><p>契約農場からその日の朝に届く鶏だけを使います。売り切れ次第、その部位は終了です。</p></div>
+      <div><h3>紀州備長炭</h3><p>火力が安定する備長炭で、外は香ばしく、中はふっくらと焼き上げます。</p></div>
+      <div><h3>継ぎ足しのタレ</h3><p>開店から12年、毎日継ぎ足してきたタレです。甘さは控えめにしています。</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="course" id="course">
+  <div class="wrap">
+    <h2>宴会コース</h2>
+    <p class="sub">2時間飲み放題つき。4名さまから承ります。</p>
+    <div class="plans">
+      <div class="plan"><h3>梅</h3><p class="yen">¥4,000<small>／お一人さま</small></p><ul><li>お通し・サラダ</li><li>串焼き5本</li><li>鶏の唐揚げ</li><li>〆の鶏そぼろ丼</li></ul></div>
+      <div class="plan best"><h3>竹<span class="tag">一番人気</span></h3><p class="yen">¥5,000<small>／お一人さま</small></p><ul><li>お通し・地鶏のたたき</li><li>串焼き7本</li><li>手羽先の唐揚げ</li><li>〆の鶏白湯ラーメン</li></ul></div>
+      <div class="plan"><h3>松</h3><p class="yen">¥6,500<small>／お一人さま</small></p><ul><li>お通し・地鶏の刺し盛り</li><li>希少部位を含む串焼き8本</li><li>水炊き</li><li>〆の雑炊と甘味</li></ul></div>
+    </div>
+    <p class="free">幹事さまお一人分を無料にします（8名さま以上・平日のみ）。</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap access">
+    <div>
+      <h2>店舗情報</h2>
+      <dl>
+        <dt>住所</dt><dd>〇〇市〇〇町1-2-3 1階</dd>
+        <dt>営業時間</dt><dd>17:00〜23:00（L.O. 22:30）</dd>
+        <dt>定休日</dt><dd>日曜日・祝日</dd>
+        <dt>席数</dt><dd>カウンター12席・個室2部屋（各6名まで）</dd>
+        <dt>アクセス</dt><dd>〇〇駅 西口から徒歩2分</dd>
+      </dl>
+    </div>
+    <div class="mapbox">地図が入ります</div>
+  </div>
+</section>
+
+<section class="cta" id="yoyaku">
+  <div class="wrap">
+    <h2>ご予約はお電話かWebで</h2>
+    <p>当日のご予約は、お電話のほうが確実です。</p>
+    <a class="btn" href="#yoyaku">Webで予約する</a>
+  </div>
+</section>
+<footer>炭火焼鳥 とりかね（架空の店舗）</footer>
+</body>
+</html>
