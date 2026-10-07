@@ -26,7 +26,7 @@ header{display:flex;justify-content:space-between;align-items:center;padding:20p
 
 /* hero */
 .hero{display:grid;grid-template-columns:auto 1fr;gap:56px;align-items:end;padding:48px 0 96px}
-.tate{writing-mode:vertical-rl;font-family:"Zen Old Mincho",serif;font-weight:700;font-size:clamp(34px,5vw,56px);line-height:1.5;letter-spacing:.18em;height:min(70vh,520px)}
+.tate{writing-mode:vertical-rl;font-family:"Zen Old Mincho",serif;font-weight:700;font-size:clamp(34px,5vw,56px);line-height:1.5;letter-spacing:.18em;white-space:nowrap}
 .hero-side p{max-width:30em;margin-bottom:28px}
 .chips{display:flex;gap:0;margin-bottom:36px;height:180px}
 .chips span{flex:1;border-radius:0 0 40px 40px;transform-origin:top;animation:drop .9s cubic-bezier(.2,.8,.2,1) both}
@@ -75,7 +75,7 @@ footer{font-size:13px;padding:32px 0;border-top:1px solid var(--line);color:var(
 
 @media (max-width:720px){
   .hero{grid-template-columns:1fr;gap:32px;padding-top:24px}
-  .tate{height:auto;max-height:340px;justify-self:end}
+  .tate{justify-self:end;font-size:34px}
   .chips{height:120px}
   .reason{grid-template-columns:1fr;gap:36px}
   section{padding:64px 0}
@@ -91,7 +91,7 @@ footer{font-size:13px;padding:32px 0;border-top:1px solid var(--line);color:var(
   </header>
 
   <div class="hero">
-    <h1 class="tate">くすみ色は<br>　似合う色で選ぶ。</h1>
+    <h1 class="tate">くすみ色は<br>似合う色で選ぶ。</h1>
     <div class="hero-side">
       <div class="chips" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
       <p>atelier mone は、ヘアカラーだけを扱う小さなサロンです。肌の色と瞳の色を見て、あなたに馴染むくすみカラーを一緒に決めます。</p>
